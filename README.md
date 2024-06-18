@@ -88,21 +88,20 @@ We can use various techniques to counter this:
 
 
 ## Organization of the Directory
-```
-|   .gitignore
-|   helper_functions.py
-|   LICENSE
-|   main.ipynb
-|   README.md
-|       
+```    
 +---data
 |       creditcard.csv
-|       skills.csv
 |       
 +---images
 |       confusion_matrix.png
 |       methodology.png
 |       roc.png
 |       threshold.png
+|
+|   .gitignore
+|   helper_functions.py
+|   LICENSE
+|   main.ipynb
+|   README.md
 ```
         
