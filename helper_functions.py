@@ -1,20 +1,18 @@
-from matplotlib.pyplot import plt
+import matplotlib.pyplot as plt
+import numpy as np
 from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from sklearn.metrics import classification_report, roc_auc_score, confusion_matrix
 
-def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues):
-    if normalize:
-        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+def plot_confusion_matrix(cm, classes, title='Confusion matrix', cmap=plt.cm.Blues):
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
     tick_marks = np.arange(len(classes))
-    plt.xticks(tick_marks, classes, rotation=45)
+    plt.xticks(tick_marks, classes)
     plt.yticks(tick_marks, classes)
-    fmt = '.2f' if normalize else 'd'
     thresh = cm.max() / 2.
     for i, j in np.ndindex(cm.shape):
-        plt.text(j, i, format(cm[i, j], fmt), horizontalalignment="center",
+        plt.text(j, i, format(cm[i, j], 'd'), horizontalalignment="center",
                  color="white" if cm[i, j] > thresh else "black")
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
