@@ -74,6 +74,9 @@ We can derive metrics such as true positive rate or recall, true negative rate, 
 
     The ROC curve is obtained by plotting the Recall (or True Positive Rate - TPR) against the False Positive Rate (FPR) for all the different classification thresholds. It is the de-facto standard for estimating the performance of fraud detection systems in the literature. A classifier K is said to be more performant than a classifier W in the ROC space only if the curve of K always dominates the curve of W.
 
+* Precision-Recall Curve
+    The Precision-Recall curve (PR curve) is obtained by plotting the precision against the recall (or True Positive Rate - TPR) for all the different classification thresholds. The main advantage of the PR curve is to put in evidence classifiers that can have both a high recall and a high precision (which indirectly translates to a high TPR and a low FPR)
+
 ### Imbalanced Learning
 
 When the distribution of classes in a dataset is highly skewed, it often leads to biased models that favor the majority class, making it challenging to achieve good performance on minority classes. Standard metrics like accuracy can be misleading due to the class imbalance. 
@@ -81,9 +84,18 @@ When the distribution of classes in a dataset is highly skewed, it often leads t
 We can use various techniques to counter this:
 
 * Oversampling: Increase the number of instances in the minority class
+
 * Undersampling: Decrease the number of instances in the majority class. 
-* *SMOTE*: Synthetic Minority over-sampling techniques - generating synthetic samples for the minority class
+
+* *SMOTE*: 
+    Synthetic Minority over-sampling techniques - generating synthetic samples for the minority class
+
+    SMOTE oversamples the minority class by generating synthetic examples in the neighborhood of observed ones. The idea is to form new minority examples by interpolating between samples of the same class. This has the effect of creating clusters around each minority observation. By creating synthetic observations, the classifier builds larger decision regions that contain nearby instances from the minority class.
+
+    Reference: https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+
 * Cost-sensitive learning: Assigning different costs to different classes during training
+
 * Ensemble methods: Algorithms like random forests are naturally able to handle imbalanced data.
 
 
@@ -104,4 +116,13 @@ We can use various techniques to counter this:
 |   main.ipynb
 |   README.md
 ```
-        
+
+
+## References
+
+[Book: Reproducible Machine Learning for Credit-card fraud detection](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Foreword.html)
+
+[Notebook: Credit fraud dealing with imbalanced datasets](https://www.kaggle.com/code/janiobachmann/credit-fraud-dealing-with-imbalanced-datasets)
+
+[Dataset: Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/code?datasetId=310&sortBy=voteCount)
+
