@@ -27,9 +27,7 @@ pip install -r requirements.txt
 3. Download the dataset 
 Download the dataset from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data) and place the 'creditcard.csv' in data/ directory.
 
-## Organization of Directory
 
+## Theory
+https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_6_ImbalancedLearning/Resampling.html
 
-## References
-
-[Fraud Detection Handbook](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_2_Background/Introduction.html)
