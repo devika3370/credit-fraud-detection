@@ -59,13 +59,13 @@ Since fraud detection is a binary classification problem, our goal is to predict
 
 We can derive metrics such as true positive rate or recall, true negative rate, precision, F1-score from the confusion matrix. 
 
-* $ TPR = Recall = \frac{TP}{TP+FN}$
+* $TPR = Recall = \frac{TP}{TP+FN}$
 
-* $ TNR = \frac{TN}{TN+FP} $
+* $TNR = \frac{TN}{TN+FP} $
 
-* $ Precision = \frac{TP}{TP+FP}$
+* $Precision = \frac{TP}{TP+FP}$
 
-* $ \textrm{F1-score} = 2*\frac{Precision*Recall}{Precision+Recall}$
+* $\textrm{F1-score} = 2*\frac{Precision*Recall}{Precision+Recall}$
 
 #### Threshold-free metrics
 * Receiving Operating Characteristic (ROC) curve
