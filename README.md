@@ -74,9 +74,39 @@ We can derive metrics such as true positive rate or recall, true negative rate, 
 
     The ROC curve is obtained by plotting the Recall (or True Positive Rate - TPR) against the False Positive Rate (FPR) for all the different classification thresholds. It is the de-facto standard for estimating the performance of fraud detection systems in the literature. A classifier K is said to be more performant than a classifier W in the ROC space only if the curve of K always dominates the curve of W.
 
-### Model Selection
-
-
 ### Imbalanced Learning
 
+When the distribution of classes in a dataset is highly skewed, it often leads to biased models that favor the majority class, making it challenging to achieve good performance on minority classes. Standard metrics like accuracy can be misleading due to the class imbalance. 
 
+We can use various techniques to counter this:
+
+* Oversampling: Increase the number of instances in the minority class
+* Undersampling: Decrease the number of instances in the majority class. 
+* *SMOTE*: Synthetic Minority over-sampling techniques - generating synthetic samples for the minority class
+* Cost-sensitive learning: Assigning different costs to different classes during training
+* Ensemble methods: Algorithms like random forests are naturally able to handle imbalanced data.
+
+
+## Organization of the Directory
+```
+C:.
+|   .gitignore
+|   helper_functions.py
+|   LICENSE
+|   main.ipynb
+|   README.md
+|   
++---.ipynb_checkpoints
+|       main-checkpoint.ipynb
+|       
++---data
+|       creditcard.csv
+|       skills.csv
+|       
++---images
+|       confusion_matrix.png
+|       methodology.png
+|       roc.png
+|       threshold.png
+```
+        
