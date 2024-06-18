@@ -89,15 +89,11 @@ We can use various techniques to counter this:
 
 ## Organization of the Directory
 ```
-C:.
 |   .gitignore
 |   helper_functions.py
 |   LICENSE
 |   main.ipynb
 |   README.md
-|   
-+---.ipynb_checkpoints
-|       main-checkpoint.ipynb
 |       
 +---data
 |       creditcard.csv
