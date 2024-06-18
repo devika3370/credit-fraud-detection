@@ -73,3 +73,10 @@ We can derive metrics such as true positive rate or recall, true negative rate, 
     ![ROC for classifiers K and W. Gray line is the performance of a random model.](images/roc.png)
 
     The ROC curve is obtained by plotting the Recall (or True Positive Rate - TPR) against the False Positive Rate (FPR) for all the different classification thresholds. It is the de-facto standard for estimating the performance of fraud detection systems in the literature. A classifier K is said to be more performant than a classifier W in the ROC space only if the curve of K always dominates the curve of W.
+
+### Model Selection
+
+
+### Imbalanced Learning
+
+
